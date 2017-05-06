@@ -1,0 +1,58 @@
+var names1 = [];
+var names = [];
+var pythonflag;
+
+var minutes = 5, the_interval = minutes * 60 * 1000;
+setInterval(function() {
+  console.log("I am doing my 5 minutes check");
+  // do your stuff here
+  
+}, the_interval);
+
+$.ajax({
+	url: 'data.json',
+	dataType: 'json',
+	type: 'get',
+	cache: false,
+	async: false,
+	success: function(data){
+		$(data.users).each(function(index, value){
+			names.push(value.name);
+			idphotos.push(value.photo1);
+		});	
+		},
+	complete: function(data){
+		userInput();
+	}
+});
+
+function userInput(){
+	var name = form1.elements["name"].value;
+	names1.push(name);
+	console.log(names1);
+	for(m=0; m<names.length; m++){
+		console.log(names[m]);
+		console.log(names1[0]);
+		if (names[m] == names1[0]){
+			flag =@ no;
+			m = names.length;
+		}
+		else{
+			flag = yes;
+		}
+		console.log(names[m]);
+		console.log(names1[0]);
+		
+	}
+	$.ajax({
+          url:"print.js", //the page containing php script
+          type: "POST", //request type
+          success:function(result){
+            alert(result);
+	    console.log("post worked! :D");
+        }
+        });
+	//run python training script here! send over names parameter
+	
+	
+};

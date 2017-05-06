@@ -1,0 +1,18 @@
+{
+"users":[
+	{
+		"name" : "Emily",
+		"photo1" : "Emily"
+	
+	},
+	{
+		"name" : "Scott",
+		"photo1" : "scott"
+	},
+	{
+		"name" : "Duncan",
+		"photo1" : "duncan1",
+		"photo2" : "duncan2"
+	}
+]
+}

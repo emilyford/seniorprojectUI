@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,800' rel='stylesheet' type='text/css'>
+
+<title>
+Open Sesame
+</title>
+
+</head>
+
+<body bgcolor="Silver">
+  
+<div id = "container">
+
+<div id=greeting>
+Greetings, User!
+</div>
+
+<h1>
+Open Sesame
+</h1>
+
+<nav>
+	<ul>
+		<li><a href="/">Home</a></li> 
+		<li><a href="/users">Users</a></li> 
+		<li><a href="/intruders">Intruders</a></li> 
+		<li><a href="/setup">Setup</a></li>
+
+	</ul>
+</nav>
+
+<br><br>
+<div  id="block">
+<p>
+<br> <br>
+Would you like to train a new user? This will allow a new person to enter the door. 
+<br><br><br>
+
+
+<a href = "/pdfs/Tutorial.doc" Tutorial></a>
+
+<form action="/test/submit" id="form1" name="form1" method="post" style="color:white">
+	<p> Name: <input type="text" name="nameinput" id="name" autofocus </p>
+	<p> <input class="button" type="button" value="Train User" id="slideshowstart" onclick = "userInput()"> </p>
+</form>
+
+<br>
+
+</p>
+</div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type = "text/javascript" src="javascripts/usersetup.js"> </script>
+
+</body>
+
+</html>

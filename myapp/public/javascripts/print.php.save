@@ -1,0 +1,4 @@
+<?php>
+echo "Package is: " . $_GET['package'];
+system("sudo python /home/pi/Alarm/change_alarm.py {$_GET['package']}", $ret_val);
+?>
